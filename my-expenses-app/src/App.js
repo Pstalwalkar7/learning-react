@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import Expenses from "./components/Expenses";
 
 function App() {
+
+  const expenses = [
+    {
+      "id": 1,
+      "date": new Date(2023, 1, 24),
+      "title": "Chess Tournament",
+      "amount": 650
+    },
+    {
+      "id": 2,
+      "date": new Date(2023, 1, 20),
+      "title": "Zerodha - HDFC Share",
+      "amount": 8000
+    },
+    {
+      "id": 3,
+      "date": new Date(2022, 10, 15),
+      "title": "Swiggy",
+      "amount": 500
+    },
+    {
+      "id": 4, 
+      "date": new Date(2023, 1, 21),
+      "title": "Mutual Funds SIP",
+      "amount": 30000
+    }
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 align="center">Expenses Tracker App</h1>
+      <Expenses listExpenses = {expenses}/>
     </div>
   );
 }
